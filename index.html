@@ -1,50 +1,130 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Website of Jeff Riffle</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jeff Riffle's homelab learning journal: Kubernetes, networking, resilient storage, observability, and secure automation.">
+    <meta name="theme-color" content="#07110e">
+    <title>Jeff Riffle | HomeLab Junkie</title>
+    <link rel="stylesheet" href="assets/css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#learning-objectives">Skip to learning objectives</a>
+    <div class="site-shell">
+      <header class="site-header" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Jeff Riffle home">
+          <span class="brand-mark" aria-hidden="true">JR</span>
+          <span><strong>Jeff Riffle</strong><small>HomeLab Junkie</small></span>
+        </a>
+        <nav class="site-nav" aria-label="Site links">
+          <a href="#learning-objectives">What I'm learning</a>
+          <a href="#about">About</a>
+          <a class="github-link" href="https://github.com/HomeLabJunkie" target="_blank" rel="noreferrer">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.19a10.98 10.98 0 0 1 5.76 0c2.2-1.5 3.16-1.19 3.16-1.19.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+            GitHub
+          </a>
+        </nav>
+      </header>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>HomeLab Junkie - Jeff Riffle</h1>
-						<p>System Administrator &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; It is what it is !</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://github.com/homelabjunkie" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> Learning in production</p>
+            <h1 id="hero-title">Building resilient systems, <em>one experiment at a time.</em></h1>
+            <p class="hero-intro">I'm Jeff Riffle—a system administrator, lifelong tinkerer, and self-described cyborg. My homelab is where infrastructure theory becomes hands-on experience.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#learning-objectives">Explore my objectives</a>
+              <a class="button button-secondary" href="https://github.com/HomeLabJunkie" target="_blank" rel="noreferrer">View the build on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="lab-facts" aria-label="Current homelab highlights">
+              <li><strong>6</strong><span>K3s nodes</span></li>
+              <li><strong>3</strong><span>control planes</span></li>
+              <li><strong>7</strong><span>protected workloads</span></li>
+            </ul>
+          </div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
-					</footer>
+          <aside class="status-panel" aria-label="Current homelab stack">
+            <div class="panel-topbar">
+              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>homelab-status</span>
+              <span class="online"><i></i> online</span>
+            </div>
+            <div class="terminal-line"><span>$</span> kubectl get learning-path</div>
+            <dl class="stack-list">
+              <div><dt>orchestrate</dt><dd>K3s + Rancher</dd></div>
+              <div><dt>connect</dt><dd>Cilium + Traefik</dd></div>
+              <div><dt>persist</dt><dd>Longhorn</dd></div>
+              <div><dt>observe</dt><dd>Prometheus + Loki</dd></div>
+              <div><dt>recover</dt><dd>Verified DR + S3 next</dd></div>
+            </dl>
+            <p class="terminal-result"><span>✓</span> Curiosity reconciled successfully</p>
+          </aside>
+        </section>
 
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+        <section class="objectives-section" id="learning-objectives" aria-labelledby="objectives-title">
+          <div class="section-heading">
+            <div><p class="eyebrow"><span></span> Current curriculum</p><h2 id="objectives-title">Five learning objectives</h2></div>
+            <p>This is more than a rack of hardware. It's a place to practice the skills that make real systems dependable.</p>
+          </div>
 
+          <div class="objective-grid">
+            <article class="objective-card objective-card-featured">
+              <div class="card-number">01</div>
+              <div class="card-content">
+                <p class="card-kicker">Orchestration</p>
+                <h3>Operate Kubernetes with confidence</h3>
+                <p>Build, upgrade, and troubleshoot a highly available K3s cluster while learning how etcd, scheduling, reconciliation, and safe node maintenance fit together.</p>
+                <ul class="tag-list" aria-label="Technologies"><li>K3s</li><li>Rancher</li><li>etcd</li><li>Ansible</li></ul>
+              </div>
+              <div class="mini-topology" aria-label="Three control-plane nodes connected to three worker nodes">
+                <span>control plane</span><div><i>CP1</i><i>CP2</i><i>CP3</i></div><b></b><div><i>W1</i><i>W2</i><i>W3</i></div><span>workers</span>
+              </div>
+            </article>
+
+            <article class="objective-card">
+              <div class="card-number">02</div><p class="card-kicker">Networking</p>
+              <h3>Understand how traffic really moves</h3>
+              <p>Explore eBPF networking, ingress, TLS, tunnels, service discovery, and policy—not just until packets flow, but until the path makes sense.</p>
+              <ul class="tag-list" aria-label="Technologies"><li>Cilium</li><li>Traefik</li><li>Cloudflare</li></ul>
+            </article>
+
+            <article class="objective-card">
+              <div class="card-number">03</div><p class="card-kicker">Resilience</p>
+              <h3>Make recovery a practiced skill</h3>
+              <p>Protect persistent data, verify every backup, rehearse restoration, and design for the day a disk, node, or entire cluster stops cooperating.</p>
+              <ul class="tag-list" aria-label="Technologies"><li>Longhorn</li><li>Snapshots</li><li>DR</li><li>S3</li></ul>
+            </article>
+
+            <article class="objective-card">
+              <div class="card-number">04</div><p class="card-kicker">Observability</p>
+              <h3>Turn signals into understanding</h3>
+              <p>Connect metrics, logs, dashboards, and alerts so failures leave evidence—and capacity decisions are based on data instead of guesses.</p>
+              <ul class="tag-list" aria-label="Technologies"><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Alloy</li></ul>
+            </article>
+
+            <article class="objective-card">
+              <div class="card-number">05</div><p class="card-kicker">Automation &amp; security</p>
+              <h3>Build repeatable, safer operations</h3>
+              <p>Treat infrastructure as code, gate changes through pull requests, reduce configuration drift, patch vulnerabilities, and automate the checks worth repeating.</p>
+              <ul class="tag-list" aria-label="Technologies"><li>GitHub Actions</li><li>Fleet</li><li>SOPS</li><li>Dependabot</li></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="about-section" id="about" aria-labelledby="about-title">
+          <div><p class="eyebrow"><span></span> About the operator</p><h2 id="about-title">HomeLab Junkie — Jeff Riffle</h2></div>
+          <div class="about-copy">
+            <p>System Administrator <span>•</span> Cyborg <span>•</span> Builder of things that should probably have a runbook</p>
+            <p class="motto">“It is what it is!”</p>
+          </div>
+          <a class="button button-primary" href="https://github.com/HomeLabJunkie" target="_blank" rel="noreferrer">github.com/HomeLabJunkie <span aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Designed, deployed, observed, and backed up in the homelab.</p>
+        <p>&copy; 2026 Jeff Riffle</p>
+      </footer>
+    </div>
+  </body>
 </html>
-
-
